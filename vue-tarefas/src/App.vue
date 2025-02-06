@@ -1,18 +1,14 @@
 <script setup>
 import { RouterView } from 'vue-router';
+import SideMenu from './components/SideMenu.vue';
 </script>
 
 <template>
-  
-    <!-- <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav> -->
-
-    <RouterView/>
-
+  <RouterView/>
+  <SideMenu/>
 </template>
 
 <style scoped>
+
 
 </style>

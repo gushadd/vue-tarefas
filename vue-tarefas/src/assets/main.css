@@ -7,6 +7,15 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, p, i{
+  color: black;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+
 /* #app {
   max-width: 1280px;
   margin: 0 auto;
