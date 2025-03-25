@@ -1,1 +1,69 @@
 @import './base.css';
+
+:root {
+  --body-bg: var(--p-surface-50);
+  --main-bg: var(--p-surface-100);
+  --text-color: var(--p-surface-900);
+}
+
+:root[class='app-dark'] {
+  --body-bg: var(--p-surface-950);
+  --main-bg: var(--p-surface-900);
+  --text-color: var(--p-surface-100);
+}
+
+* {
+  transition: background-color 0.3s ease-in-out;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i {
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
