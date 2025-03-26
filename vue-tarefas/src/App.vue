@@ -1,10 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import SideMenu from '../src/components/SideMenu.vue'
+import { RouterLink, RouterView } from 'vue-router';
+import SideMenu from '../src/components/SideMenu.vue';
 </script>
 
 <template>
-  <SideMenu />
+  <SideMenu></SideMenu>
   <RouterView />
 </template>
 

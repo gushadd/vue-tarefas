@@ -4,12 +4,14 @@
   --body-bg: var(--p-surface-50);
   --main-bg: var(--p-surface-100);
   --text-color: var(--p-surface-900);
+  --side-menu-item-hover-bg: var(--p-surface-200);
 }
 
 :root[class='app-dark'] {
   --body-bg: var(--p-surface-950);
   --main-bg: var(--p-surface-900);
   --text-color: var(--p-surface-100);
+  --side-menu-item-hover-bg: var(--p-surface-800);
 }
 
 * {
