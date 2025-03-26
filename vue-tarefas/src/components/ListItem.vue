@@ -1,4 +1,6 @@
 <script setup>
+import { Badge } from 'primevue';
+
 defineProps({
   title: String,
   toDoQuantity: Number,
@@ -8,7 +10,7 @@ defineProps({
 <template>
   <main>
     <p>{{ title }}</p>
-    <p>{{ toDoQuantity }}</p>
+    <Badge :value="toDoQuantity" />
   </main>
 </template>
 
