@@ -11,14 +11,14 @@ defineProps({
 </script>
 
 <template>
-  <main>
+  <RouterLink class="list" :to="'/list'">
     <p>{{ title }}</p>
     <Badge :value="toDoQuantity" />
-  </main>
+  </RouterLink>
 </template>
 
 <style scoped>
-main {
+.list {
   display: flex;
   justify-content: space-between;
 }

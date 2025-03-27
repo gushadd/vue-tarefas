@@ -4,8 +4,14 @@ import SideMenu from '../src/components/SideMenu.vue';
 </script>
 
 <template>
-  <SideMenu></SideMenu>
-  <RouterView />
+  <main>
+    <SideMenu/>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  display: flex;
+}
+</style>

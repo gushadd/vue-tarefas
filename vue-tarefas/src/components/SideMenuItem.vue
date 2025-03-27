@@ -4,6 +4,8 @@
 // são criadas: uma para as listas, uma para as tags
 // e outra para os prazos.
 
+import AddItem from './AddItem.vue';
+
 import { defineAsyncComponent } from 'vue';
 
 import Accordion from 'primevue/accordion';
@@ -42,6 +44,8 @@ const componentMap = {
             <component :is="componentMap[item.type]" v-bind="item" />
           </li>
         </ul>
+        <!-- Achar forma melhor de condicionar o aparecimento do componente AddItem -->
+        <AddItem v-if="title == 'Listas' || title == 'Tags'"></AddItem>
       </AccordionContent>
     </AccordionPanel>
   </Accordion>

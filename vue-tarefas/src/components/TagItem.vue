@@ -9,14 +9,14 @@ defineProps({
 </script>
 
 <template>
-  <main>
+  <RouterLink class="tag" :to="'/tag'">
     <i class="pi pi-bookmark-fill" :style="{ color: tagColor }"></i>
     <p>{{ title }}</p>
-  </main>
+  </RouterLink>
 </template>
 
 <style scoped>
-main {
+.tag {
   display: flex;
   align-items: center;
   gap: 1rem;

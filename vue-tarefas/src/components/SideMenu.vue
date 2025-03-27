@@ -29,7 +29,7 @@ const deadlines = [
   { type: "deadline", title: "Calendário"},
 ];
 
-let isDarkModeActivated = ref(false);
+const isDarkModeActivated = ref(false);
 
 const changeTheme = () => {
   isDarkModeActivated.value = !isDarkModeActivated.value;
@@ -38,7 +38,7 @@ const changeTheme = () => {
 </script>
 
 <template>
-  <div class="main-wrapper">
+  <div class="main-wrapper" :class="{ open: isOpen }">
     <header>
       <h5>Vue Tarefas</h5>
       <Button @click="changeTheme" variant="text">

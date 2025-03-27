@@ -8,13 +8,13 @@ defineProps({
 </script>
 
 <template>
-  <main>
+  <RouterLink class="deadline" :to="'/deadline'">
     <p>{{ title }}</p>
-  </main>
+  </RouterLink>
 </template>
 
 <style scoped>
-main {
+.deadline {
   display: flex;
 }
 </style>
