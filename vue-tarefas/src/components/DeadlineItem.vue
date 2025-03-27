@@ -1,4 +1,7 @@
 <script setup>
+// Este componente representa um item dentro do
+// Accordion de prazos do menu lateral
+
 defineProps({
   title: String,
 });

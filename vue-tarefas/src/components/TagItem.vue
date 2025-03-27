@@ -1,4 +1,7 @@
 <script setup>
+// Este componente representa um item dentro do
+// Accordion de tags do menu lateral
+
 defineProps({
   title: String,
   tagColor: String, // usar hex

@@ -1,5 +1,9 @@
 <script setup>
 
+// Este componente é o menu lateral do app
+// É nesse componente onde deve-se buscar, no banco,
+// as listas, tags e prazos
+
 import SideMenuItem from './SideMenuItem.vue';
 
 import Button from 'primevue/button';
@@ -66,6 +70,7 @@ const changeTheme = () => {
   width: 20vw;
   height: 100vh;
   padding: 1rem;
+  overflow-y: scroll;
 }
 
 header {

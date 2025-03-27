@@ -1,4 +1,7 @@
 <script setup>
+// Este componente representa um item dentro do
+// Accordion de listas do menu lateral
+
 import { Badge } from 'primevue';
 
 defineProps({

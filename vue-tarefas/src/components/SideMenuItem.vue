@@ -1,4 +1,9 @@
 <script setup>
+// Esse componente engloba o Accordion do PrimeVue,
+// e é usado no menu lateral, onde 3 instâncias dele
+// são criadas: uma para as listas, uma para as tags
+// e outra para os prazos.
+
 import { defineAsyncComponent } from 'vue';
 
 import Accordion from 'primevue/accordion';
