@@ -7,7 +7,7 @@
 import SideMenuItem from './SideMenuItem.vue';
 
 import Button from 'primevue/button';
-import { ref } from 'vue';
+import { ref, inject, computed } from 'vue';
 
 // Aqui, passo as listas para serem mostradas no menu lateral 
 const lists = [
@@ -29,18 +29,31 @@ const deadlines = [
   { type: "deadline", title: "Calendário"},
 ];
 
+const isMenuCollapsed = inject('isMenuCollapsed');
 const isDarkModeActivated = ref(false);
 
 const changeTheme = () => {
   isDarkModeActivated.value = !isDarkModeActivated.value;
   document.documentElement.classList.toggle('app-dark');
 };
+
+// Esses styles controlam a aparência de elementos ao colapsar o menu
+const menuStyles = computed(() => ({
+  width: isMenuCollapsed.value ? '0vh' : '20vw',
+  opacity: isMenuCollapsed.value ? '0' : '1',
+  pointerEvents: isMenuCollapsed.value ? 'none' : 'auto',
+  padding: isMenuCollapsed.value ? '0' : '1rem'
+}));
+
+const titleStyles = computed(() => ({
+  fontSize: isMenuCollapsed.value ? '0px' : '',
+}));
 </script>
 
 <template>
-  <div class="main-wrapper" :class="{ open: isOpen }">
+  <div class="main-wrapper" :style="menuStyles">
     <header>
-      <h5>Vue Tarefas</h5>
+      <h5 class="title" :style="titleStyles">Vue Tarefas</h5>
       <Button @click="changeTheme" variant="text">
         <i class="pi" :class="isDarkModeActivated ? 'pi-moon' : 'pi-sun'"></i>
       </Button>
@@ -71,6 +84,7 @@ const changeTheme = () => {
   height: 100vh;
   padding: 1rem;
   overflow-y: scroll;
+  transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
 }
 
 header {
@@ -78,6 +92,10 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 5vh;
+}
+
+.title{
+  transition: font-size .3s ease;
 }
 
 main{
