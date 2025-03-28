@@ -45,6 +45,5 @@ main {
 
 .routerview {
   height: 100%;
-  background-color: lightcoral;
 }
 </style>

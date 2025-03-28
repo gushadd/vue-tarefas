@@ -15,7 +15,7 @@ const changeHeaderTitle = inject('changeHeaderTitle');
 </script>
 
 <template>
-  <RouterLink class="list" :to="'/list'" @click="changeHeaderTitle(title)">
+  <RouterLink class="list" :to="'/list'" @click="changeHeaderTitle(`Lista: ${title}`)">
     <p>{{ title }}</p>
     <Badge :value="toDoQuantity" />
   </RouterLink>

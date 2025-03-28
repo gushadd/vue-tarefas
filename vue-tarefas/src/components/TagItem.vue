@@ -14,7 +14,7 @@ const changeHeaderTitle = inject('changeHeaderTitle');
 </script>
 
 <template>
-  <RouterLink class="tag" :to="'/tag'" @click="changeHeaderTitle(title)">
+  <RouterLink class="tag" :to="'/tag'" @click="changeHeaderTitle(`Tag: ${title}`)">
     <i class="pi pi-bookmark-fill" :style="{ color: tagColor }"></i>
     <p>{{ title }}</p>
   </RouterLink>
