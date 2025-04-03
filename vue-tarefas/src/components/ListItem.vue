@@ -12,6 +12,7 @@ defineProps({
 
 // Ao clicar no RouterLink, o nome da lista é enviado ao Header
 const changeHeaderTitle = inject('changeHeaderTitle');
+
 </script>
 
 <template>

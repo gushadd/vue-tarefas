@@ -5,6 +5,7 @@
   --main-bg: var(--p-surface-100);
   --text-color: var(--p-surface-900);
   --side-menu-item-hover-bg: var(--p-surface-200);
+  --task-border-color: var(--p-surface-300);
 }
 
 :root[class='app-dark'] {
@@ -12,11 +13,12 @@
   --main-bg: var(--p-surface-900);
   --text-color: var(--p-surface-100);
   --side-menu-item-hover-bg: var(--p-surface-800);
+  --task-border-color: var(--p-surface-700);
 }
 
-* {
-  transition: background-color 0.3s ease-in-out;
-}
+/* * {
+  transition: background-color 3s ease-in-out;
+} */
 
 body {
   background-color: var(--body-bg);
